@@ -1,0 +1,21 @@
+.custom-button {
+    width: 100px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    display: inline-flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center text horizontally */
+    padding: 0; /* Remove default padding */
+}
+.table-centered {
+    display: flex;
+    justify-content: center;
+}
+
+.tableFixHead {
+    width: 100%; /* Optional: to make sure the container takes full width */
+}
+
+.table {
+    width: 100%; /* Adjust the width of the table as needed */
+}

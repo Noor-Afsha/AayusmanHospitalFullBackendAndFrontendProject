@@ -1,0 +1,76 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">AAYUSMAAN</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/docdashboard" style="color: white;">Back</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <div class="card shadow">
+      <div class="card-header bg-primary text-white">
+        <h3>Patient Information</h3>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group row mb-3">
+            <label for="patientId" class="col-sm-2 col-form-label">ID:</label>
+            <div class="col-sm-10">
+              <p class="form-control-plaintext"><b>{{ patient.id }}</b></p>
+            </div>
+          </div>
+          <div class="form-group row mb-3">
+            <label for="patientName" class="col-sm-2 col-form-label">Name:</label>
+            <div class="col-sm-10">
+              <p class="form-control-plaintext"><b>{{ patient.name }}</b></p>
+            </div>
+          </div>
+          <div class="form-group row mb-3">
+            <label for="patientAge" class="col-sm-2 col-form-label">Age:</label>
+            <div class="col-sm-10">
+              <p class="form-control-plaintext"><b>{{ patient.age }}</b></p>
+            </div>
+          </div>
+          <div class="form-group row mb-3">
+            <label for="patientDose" class="col-sm-2 col-form-label">Dose:</label>
+            <div class="col-sm-10">
+              <p class="form-control-plaintext"><b>{{ patient.dose }}</b></p>
+            </div>
+          </div>
+          <div class="form-group row mb-3">
+            <label for="patientFees" class="col-sm-2 col-form-label">Fees:</label>
+            <div class="col-sm-10">
+              <p class="form-control-plaintext"><b>{{ patient.fees }}</b></p>
+            </div>
+          </div>
+          <div class="form-group row mb-3">
+            <label for="patientBlood" class="col-sm-2 col-form-label">Blood Group:</label>
+            <div class="col-sm-10">
+              <p class="form-control-plaintext"><b>{{ patient.blood }}</b></p>
+            </div>
+          </div>
+          <div class="form-group row mb-3">
+            <label for="patientUrgency" class="col-sm-2 col-form-label">Urgency:</label>
+            <div class="col-sm-10">
+              <p class="form-control-plaintext"><b>{{ patient.urgency }}</b></p>
+            </div>
+          </div>
+          <div class="form-group row mb-3">
+            <label for="patientPrescription" class="col-sm-2 col-form-label">Prescription:</label>
+            <div class="col-sm-10">
+              <p class="form-control-plaintext"><b>{{ patient.prescription }}</b></p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

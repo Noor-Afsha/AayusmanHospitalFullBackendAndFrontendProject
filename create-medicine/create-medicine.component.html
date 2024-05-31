@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container">
+        <a class="navbar-brand text-white" routerLink="/">AAYUSMAAN HOSPITAL</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white" routerLink="/view-medicine" routerLinkActive="active">Back</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container"> 
+    <hr>
+    <h2 class="text-center mt-4">Add New Medicine</h2>
+    <p class="text-secondary fs-5">
+        <marquee behavior="scroll" direction="left">
+            Welcome to Appointment . Please find the patient list below!!. Click Appointments to view and update Appointments, Click Add Appointment to add new Appointment
+        </marquee>
+    </p>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>DrugName</label>
+            <input type="text" id="drugName" class="form-control" name="drugName" placeholder="Enter your drug name" [(ngModel)]="medicine.drugName" />
+        </div>
+        <div class="form-group">
+            <label>Stock</label>
+            <input type="text" id="stock" class="form-control" name="stock" placeholder="Enter your stock" [(ngModel)]="medicine.stock" />
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>

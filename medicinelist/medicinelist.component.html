@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container">
+        <a class="navbar-brand text-white" routerLink="/">AAYUSMAAN HOSPITAL</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white" routerLink="/create-medicine" routerLinkActive="active">Add
+                        Medicine</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" routerLink="/docdashboard" routerLinkActive="active">Back</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="grid">
+    <div class="container">
+        <h2 class="text-center mt-4">Medicine List</h2>
+        <hr>
+        <p class="text-secondary fs-5">
+            <marquee behavior="scroll" direction="left">
+                Welcome to Medicine Dashboard. Please find the medicine list below!! Click Medicine to view and update
+                medicines. Click Add Medicine to add new medicines.
+            </marquee>
+        </p>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>DRUGS NAME</th>
+                    <th>STOCK</th>
+                    <th>ACTION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let medicine of medicines">
+                    <td>{{ medicine.id }}</td>
+                    <td>{{ medicine.drugName }}</td>
+                    <td>{{ medicine.stock }}</td>
+                    <td>
+                        <button type="submit" class="btn btn-info" (click)="update(medicine.id)">Updated</button>
+                        <button type="button" class="btn btn-danger" (click)="delete(medicine.id)" style="margin-left: 10px;">Deleted</button>
+
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

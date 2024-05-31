@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container">
+        <a class="navbar-brand text-white" routerLink="/">AAYUSMAAN HOSPITAL</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white" routerLink="/create-patient" routerLinkActive="active">Add Patients</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" routerLink="/view-medicine" routerLinkActive="active">View Medicine</a>
+                </li>
+            </ul>
+            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">
+                <a class="text-white" (click)="logout()">Logout</a>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <h2 class="text-center mt-4">Doctor's Dashboard</h2>
+    <p class="text-secondary fs-5">
+        <marquee behavior="scroll" direction="left">
+            Welcome to Admin Dashboard. Please find the patient list below!!. Click Appointments to view and update Appointments, Click Add Appointment to add new Appointment
+        </marquee>
+    </p>
+    <div class="tableFixHead">
+        <table class="table table-striped">
+            <thead class="table-header">
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>AGE</th>
+                    <th>FEES</th>
+                    <th>BLOOD TYPE</th>
+                    <th>URGENCY</th>
+                    <th>ACTION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let patient of patients">
+                    <td>{{patient.id}}</td>
+                    <td>{{patient.name}}</td>
+                    <td>{{patient.age}}</td>
+                    <td>{{patient.fees}}</td>
+                    <td>{{patient.blood}}</td>
+                    <td>{{patient.urgency}}</td>
+                    <td>
+                        <button (click)="update(patient.id)" class="btn btn-info custom-button">Updated</button>
+                        <button (click)="delete(patient.id)" class="btn btn-danger custom-button" style="margin-left: 10px;">Deleted</button>
+                        <button (click)="view(patient.id)" class="btn btn-dark custom-button" style="margin-left: 10px;">View</button>
+                    </td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ccc;"></tr> <!-- Add this line to create the horizontal line -->
+            </tbody>
+        </table>
+    </div>
+    

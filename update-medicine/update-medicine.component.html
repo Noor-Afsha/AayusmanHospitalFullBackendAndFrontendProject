@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">AAYUSMAAN</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/view-medicine" style="color: white;">Back</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+<div class="container">
+    <h2 class="text-center">Update Medicine Form</h2>
+    <form (ngSubmit)="onSubmit()">
+        <hr>
+        <div class="form-group">
+            <label>Drug Name</label>
+            <input type="text" id="drugName" name="drugName" placeholder="Enter drugName" class="form-control"
+                [(ngModel)]="medicine.drugName" />
+        </div>
+        <div class="form-group">
+            <label>Stock</label>
+            <input type="text" id="stock" name="stock" placeholder="Enter stock" class="form-control"
+                [(ngModel)]="medicine.stock" />
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>
